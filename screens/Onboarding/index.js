@@ -5,7 +5,7 @@ import {Text, View, FlatList, Image} from 'react-native';
 import {constants, COLORS, SIZES, FONTS} from '../../constants';
 import {TextButton} from '../../components';
 
-function Onboarding() {
+function Onboarding({navigation}) {
   const [isLastItem, setIsLastItem] = useState(false);
 
   // SVG
@@ -34,6 +34,8 @@ function Onboarding() {
       if (currentIndex.current === constants.onboarding_screens.length - 1) {
         setIsLastItem(true);
       }
+    } else {
+      navigation.navigate('Welcome');
     }
   };
 

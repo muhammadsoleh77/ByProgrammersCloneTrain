@@ -1,4 +1,7 @@
 // Authentication
 import Onboarding from './Onboarding';
 
-export {Onboarding};
+// Auth
+import Welcome from './Auth/Welcome';
+
+export {Onboarding, Welcome};
